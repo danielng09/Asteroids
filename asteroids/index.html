@@ -2,11 +2,12 @@
 <html>
   <head>
     <title>Asteroids</title>
+    <link rel="stylesheet" type="text/css" href="asteroid.css">
   </head>
 
   </body>
-    <h1>Welcome to Asteroids</h1>
-    <canvas id="game-canvas" width="1600" height="700"></canvas>
+    <h1>ASTEROIDS</h1>
+    <canvas id="game-canvas"></canvas>
 
     <script src="lib/utils.js"></script>
     <script src="lib/movingObject.js"></script>
@@ -15,13 +16,19 @@
     <script src="lib/gameView.js"></script>
     <script src="lib/ship.js"></script>
     <script src="lib/bullet.js"></script>
-    <script src="lib/keymaster/keymaster.js"></script>
+    <script src="lib/keymaster.js"></script>
     <script>
-      var c = document.getElementById("game-canvas")
-      var ctx = c.getContext("2d");
+      var canvas = document.getElementById("game-canvas")
+      canvas.width = 1280;
+      canvas.height = 720;
+
+
+
+
+
+      var ctx = canvas.getContext("2d");
       var game = new Asteroids.Game(5);
-      var gameView = new Asteroids.GameView(game, ctx);
-      gameView.start();
+      var gameView = new Asteroids.GameView(game, ctx).start();
     </script>
   </body>
 

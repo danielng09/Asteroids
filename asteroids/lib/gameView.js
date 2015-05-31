@@ -10,19 +10,19 @@
 
   GameView.prototype.bindKeyHandlers = function () {
     var gameView = this;
-    key('up', function () {
+    key('w', function () {
       gameView.game.ship.power([0, -1]);
     });
-    key('down', function () {
+    key('s', function () {
       gameView.game.ship.power([0, 1]);
     });
-    key('left', function () {
+    key('a', function () {
       gameView.game.ship.power([-1, 0]);
     });
-    key('right', function () {
+    key('d', function () {
       gameView.game.ship.power([1, 0]);
     });
-    key('a', function () {
+    key('space', function () {
       gameView.game.ship.fireBullet();
     });
   };
