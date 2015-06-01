@@ -39,7 +39,7 @@
 
 
     this.allObjects().forEach(function (movingObject) {
-      movingObject.draw(ctx);
+        movingObject.draw(ctx);
     });
   };
 

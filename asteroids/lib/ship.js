@@ -12,6 +12,17 @@
   };
   Asteroids.Util.inherits(Ship, Asteroids.MovingObject);
 
+  Ship.prototype.draw = function(ctx) {
+    ctx.beginPath();
+    ctx.moveTo(this.pos[0] - 15, this.pos[1] + 15);
+    ctx.lineTo(this.pos[0], this.pos[1] - 17);
+    ctx.lineTo(this.pos[0] + 15, this.pos[1] + 15);
+    ctx.closePath();
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = this.color;
+    ctx.stroke();
+  };
+
   Ship.prototype.fireBullet = function () {
     if (this.vel[0] !== 0 || this.vel[1] !== 0) {
       var pos = this.pos.slice();

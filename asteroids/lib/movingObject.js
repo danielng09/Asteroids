@@ -18,8 +18,9 @@
     var x = this.pos[0];
     var y = this.pos[1];
     ctx.arc(x, y, this.radius, 0,2*Math.PI, false);
-    ctx.fillStyle = this.color;
-    ctx.fill();
+    ctx.lineWidth = 15;
+    ctx.strokeStyle = this.color;
+    ctx.stroke();
   };
 
   MovingObject.prototype.move = function() {
